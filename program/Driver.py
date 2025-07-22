@@ -1,7 +1,7 @@
 import sys
 from antlr4 import *
-from SimpleLangLexer import SimpleLangLexer
-from SimpleLangParser import SimpleLangParser
+from visitor.SimpleLangLexer import SimpleLangLexer
+from visitor.SimpleLangParser import SimpleLangParser
 from type_check_visitor import TypeCheckVisitor
 
 def main(argv):

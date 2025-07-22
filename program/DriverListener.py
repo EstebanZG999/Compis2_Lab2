@@ -1,7 +1,7 @@
 import sys
 from antlr4 import *
-from SimpleLangLexer import SimpleLangLexer
-from SimpleLangParser import SimpleLangParser
+from listener.SimpleLangLexer import SimpleLangLexer
+from listener.SimpleLangParser import SimpleLangParser
 from type_check_listener import TypeCheckListener
 from antlr4.tree.Tree import ParseTreeWalker
 
