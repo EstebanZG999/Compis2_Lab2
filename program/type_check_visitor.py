@@ -1,5 +1,5 @@
-from SimpleLangParser import SimpleLangParser
-from SimpleLangVisitor import SimpleLangVisitor
+from visitor.SimpleLangParser import SimpleLangParser
+from visitor.SimpleLangVisitor import SimpleLangVisitor
 from custom_types import IntType, FloatType, StringType, BoolType
 
 class TypeCheckVisitor(SimpleLangVisitor):

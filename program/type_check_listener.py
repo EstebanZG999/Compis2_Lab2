@@ -1,5 +1,5 @@
-from SimpleLangListener import SimpleLangListener
-from SimpleLangParser import SimpleLangParser
+from listener.SimpleLangListener import SimpleLangListener
+from listener.SimpleLangParser import SimpleLangParser
 from custom_types import IntType, FloatType, StringType, BoolType
 
 class TypeCheckListener(SimpleLangListener):
