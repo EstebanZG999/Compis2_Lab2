@@ -24,8 +24,8 @@ Experimentarás con un sistema de tipos básico, extenderás una gramática y co
 3. **Generar Archivos de Lexer y Parser:** Dentro del contenedor, compila la gramática ANTLR a Python con:
 
    ```bash
-   antlr -Dlanguage=Python3 -visitor SimpleLang.g4			*** Esto es para utilizar un Visitor ***
-   antlr -Dlanguage=Python3 -listener SimpleLang.g4		*** Y esto es para utilizar un Listener ***
+   antlr -Dlanguage=Python3 -visitor SimpleLang.g4 -o visitor			*** Esto es para utilizar un Visitor ***
+   antlr -Dlanguage=Python3 -listener SimpleLang.g4 -o listener		*** Y esto es para utilizar un Listener ***
    ```
 4. **Ejecutar el Analizador**
    Usa el driver para analizar el archivo de prueba:
