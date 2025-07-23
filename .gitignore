@@ -1,2 +1,4 @@
 configs
 program/__pycache__
+/program/visitor/__pycache__/
+/program/listener/__pycache__/

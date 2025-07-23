@@ -39,8 +39,18 @@ class SimpleLangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SimpleLangParser#Comparison.
+    def visitComparison(self, ctx:SimpleLangParser.ComparisonContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SimpleLangParser#Parens.
     def visitParens(self, ctx:SimpleLangParser.ParensContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SimpleLangParser#Logical.
+    def visitLogical(self, ctx:SimpleLangParser.LogicalContext):
         return self.visitChildren(ctx)
 
 
