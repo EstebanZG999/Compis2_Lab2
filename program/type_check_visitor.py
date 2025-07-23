@@ -21,7 +21,23 @@ class TypeCheckVisitor(SimpleLangVisitor):
         return FloatType() if isinstance(left_type, FloatType) or isinstance(right_type, FloatType) else IntType()
     else:
         raise TypeError("Unsupported operand types for + or -: {} and {}".format(left_type, right_type))
-  
+    
+  # Comparison: <, >, <=, >=
+  def visitComparison(self, ctx: SimpleLangParser.ComparisonContext):
+      left  = self.visit(ctx.expr(0))
+      right = self.visit(ctx.expr(1))
+      if isinstance(left, (IntType, FloatType)) and isinstance(right, (IntType, FloatType)):
+          return BoolType()
+      raise TypeError(f"Unsupported operand types for {ctx.op.text}: {left} and {right}")
+
+  # Logical: &&, ||
+  def visitLogical(self, ctx: SimpleLangParser.LogicalContext):
+      left  = self.visit(ctx.expr(0))
+      right = self.visit(ctx.expr(1))
+      if isinstance(left, BoolType) and isinstance(right, BoolType):
+          return BoolType()
+      raise TypeError(f"Unsupported operand types for {ctx.op.text}: {left} and {right}")
+
   def visitInt(self, ctx: SimpleLangParser.IntContext):
     return IntType()
 
